@@ -1,8 +1,9 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import React, { useContext } from 'react'
-import { Text, TouchableOpacity } from 'react-native';
+import React, { useContext, Component} from 'react'
+import { Text, TouchableOpacity , View, StyleSheet, Button} from 'react-native';
 import { AuthContext } from './AuthProvider';
 import { Center } from './Center';
+import Navigator from './routes/drawer'
 
 interface MeStackProps {
 
@@ -11,6 +12,7 @@ const Stack = createStackNavigator();
 
 function Feed(){
     return (
+        
         <Center>
             <Text>Me Screen</Text>
         </Center>
@@ -41,3 +43,5 @@ export const MeStack: React.FC<MeStackProps> = ({}) => {
 
         )
 }
+
+export default MeStack;

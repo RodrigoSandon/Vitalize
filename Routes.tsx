@@ -10,6 +10,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { AuthContext } from './AuthProvider';
 import { AppTabsProps } from './AppTabsProps';
 import { AuthStack } from './AuthStack';
+import { AppDrawer } from './AppDrawer';
 
 interface RoutesProps{}
 
@@ -54,7 +55,7 @@ export const Routes: React.FC<RoutesProps> = ({}) => {
     return (//when user is logged in, tabs should show at the bottom (enter the home page)
      //render the AppTabsProps
         <NavigationContainer>
-            {user ? <AppTabsProps/>:  <AuthStack/>}
+            {user ?  <AppDrawer/> || <AppTabsProps/>:  <AuthStack/>}
             </NavigationContainer>
     );
 
