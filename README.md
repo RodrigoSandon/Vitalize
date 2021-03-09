@@ -1,2 +1,2 @@
 # VitalizeProject
-Master branch -connected to my local folder
+Master branch -where I push from my origin
