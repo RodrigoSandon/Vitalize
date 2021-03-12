@@ -4,13 +4,13 @@ import {NavigationContainer} from "@react-navigation/native"; //the provider, wr
 import {View, Text, ActivityIndicator} from "react-native";
 import { Center } from './Center';
 import { Button } from 'react-native';
-import { AuthNavProps, AuthParamList } from './AuthParamList';
+import { AuthNavProps, AuthParamList } from './Authorization/AuthParamList';
 import { RouteProp } from '@react-navigation/native';
 import AsyncStorage from '@react-native-community/async-storage';
-import { AuthContext } from './AuthProvider';
-import { AppTabsProps } from './AppTabsProps';
-import { AuthStack } from './AuthStack';
-import { AppDrawer } from './AppDrawer';
+import { AuthContext } from './Authorization/AuthProvider';
+import { AppTabs } from './AppTabs';
+import { AuthStack } from './Authorization/AuthStack';
+import { AppDrawer } from './Drawer/AppDrawer';
 
 interface RoutesProps{}
 
@@ -55,7 +55,7 @@ export const Routes: React.FC<RoutesProps> = ({}) => {
     return (//when user is logged in, tabs should show at the bottom (enter the home page)
      //render the AppTabsProps
         <NavigationContainer>
-            {user ?  <AppDrawer/> || <AppTabsProps/>:  <AuthStack/>}
+            {user ?  <AppDrawer/> || <AppTabs/>:  <AuthStack/>}
             </NavigationContainer>
     );
 

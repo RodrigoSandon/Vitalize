@@ -1,9 +1,9 @@
 import React from 'react'
-import { AuthProvider } from './AuthProvider'
+import { AuthProvider } from './Authorization/AuthProvider'
 import { Routes } from './Routes'
 import { Dimensions } from 'react-native';
 import { createDrawerNavigator} from '@react-navigation/drawer';
-import AppDrawer from './AppDrawer';
+import {AppDrawer} from './Drawer/AppDrawer';
 import { NavigationContainer } from '@react-navigation/native';
 
 interface ProvidersProps {}

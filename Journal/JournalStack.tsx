@@ -1,8 +1,8 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useContext } from 'react'
 import { Text, TouchableOpacity, SafeAreaView } from 'react-native';
-import { AuthContext } from './AuthProvider';
-import { Center } from './Center';
+import { AuthContext } from '../Authorization/AuthProvider';
+import { Center } from '../Center';
 
 interface JournalStackProps {
 

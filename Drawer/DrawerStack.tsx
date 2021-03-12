@@ -1,9 +1,9 @@
 import React, {useContext} from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import { Button, FlatList, Text, TouchableOpacity } from 'react-native';
-import { AuthContext } from './AuthProvider';
-import { Center } from './Center';
-import { DrawerParamList, DrawerStackNavProps } from './DrawerParamList';
+import { Text, TouchableOpacity } from 'react-native';
+import { AuthContext } from '../Authorization/AuthProvider';
+import { Center } from '../Center';
+import { DrawerParamList } from './DrawerParamList';
 interface DrawerStackProps {}
 
 const Stack = createStackNavigator<DrawerParamList>();

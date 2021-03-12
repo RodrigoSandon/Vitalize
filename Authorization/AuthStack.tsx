@@ -1,10 +1,10 @@
 import { BottomTabBar } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react'
-import { Button, Text, View, Image, StyleSheet, SafeAreaView, ImageBackground, TouchableOpacity } from 'react-native';
+import { Button, Text, View, Image, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
 import { AuthNavProps, AuthParamList } from './AuthParamList';
 import { AuthContext } from './AuthProvider';
-import { Center } from './Center';
+import { Center } from '../Center';
 
 interface AuthStackProps {
 
@@ -19,7 +19,7 @@ function Login({navigation, route}: AuthNavProps<'Login'>){
     return(
         <>
         <Center>
-            <Image source={require('./assets/signInImage.jpg')} style={styles.image} />
+            <Image source={require('../assets/signInImage.jpg')} style={styles.image} />
         </Center>
         <Center>
 

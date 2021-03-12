@@ -3,18 +3,18 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AppParamList } from './AppParamList';
 import { Button, Text, StyleSheet } from 'react-native';
 import { Center } from './Center';
-import { AuthContext } from './AuthProvider';
+import { AuthContext } from './Authorization/AuthProvider';
 import { Ionicons, FontAwesome5, Entypo, MaterialCommunityIcons}from '@expo/vector-icons';
 import { Image } from 'react-native';
-import { MeditateStack } from './MeditateStack';
-import { MeStack } from './MeStack';
-import { JournalStack } from './JournalStack';
+import { MeditateStack } from './Meditate/MeditateStack';
+import { MeStack } from './Me/MeStack';
+import { JournalStack } from './Journal/JournalStack';
 
-interface AppTabsPropsProps {}
+interface AppTabsProps {}
 
 const Tabs = createBottomTabNavigator<AppParamList>()
 
-export const AppTabsProps: React.FC<AppTabsPropsProps> = ({}) => {
+export const AppTabs: React.FC<AppTabsProps> = ({}) => {
         return (
             <Tabs.Navigator
               screenOptions={({ route }) => ({

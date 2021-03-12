@@ -1,6 +1,6 @@
 import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { AppTabsProps } from './AppTabsProps';
+import { AppTabs } from '../AppTabs';
 import { DrawerParamList } from './DrawerParamList';
 import { Feather, MaterialIcons, FontAwesome5, Ionicons}from '@expo/vector-icons';
 
@@ -36,11 +36,11 @@ export const AppDrawer: React.FC<AppDrawerProps> = ({}) => {
         }
       })}
     >
-      <Drawer.Screen name="Account" component={AppTabsProps} />
-      <Drawer.Screen name="Privacy" component={AppTabsProps} />
-      <Drawer.Screen name="InviteFriends" component={AppTabsProps} />
-      <Drawer.Screen name="Notifications" component={AppTabsProps} />
-      <Drawer.Screen name="Settings" component={AppTabsProps} />
+      <Drawer.Screen name="Account" component={AppTabs} />
+      <Drawer.Screen name="Privacy" component={AppTabs} />
+      <Drawer.Screen name="InviteFriends" component={AppTabs} />
+      <Drawer.Screen name="Notifications" component={AppTabs} />
+      <Drawer.Screen name="Settings" component={AppTabs} />
     </Drawer.Navigator>
 
   )

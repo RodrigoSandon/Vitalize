@@ -2,8 +2,8 @@ import { StackActions } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useContext } from 'react'
 import { Button, FlatList, Text, TouchableOpacity } from 'react-native';
-import { AuthContext } from './AuthProvider';
-import { Center } from './Center';
+import { AuthContext } from '../Authorization/AuthProvider';
+import { Center } from '../Center';
 import faker from 'faker';
 import { MeditateParamList, MeditateStackNavProps } from './MeditateParamList';
 //Currently I can't get the navigation to go to another screen in favorites
