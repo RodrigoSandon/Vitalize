@@ -4,7 +4,7 @@ Master branch - pushed from origin
 # Possible Bugs
 1. Transition from non-Me tabs to logout (there's a unsmooth transition)
 
-# Immideate To-Do
+# Immediate To-Do
 1. Make new stacks of drawer tabs 
 2. Add navigation to drawer tabs
 3. Add a sign-in stack: ask for credentials
