@@ -3,6 +3,7 @@ Master branch - pushed from origin
 
 # Possible Bugs
 1. Transition from non-Me tabs to logout (there's a unsmooth transition)
+2. Configuring firebase backend: need to open project on Xcode to configure firebase but right now they are separate projects. Need to make .xcodeproj file match that of the Vitalize_App_Official file
 
 # Immediate To-Do
 1. Make new stacks of drawer tabs 
