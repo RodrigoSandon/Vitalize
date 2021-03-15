@@ -1,32 +1,33 @@
+import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Text, TouchableOpacity } from 'react-native';
 import { AuthContext } from '../Authorization/AuthProvider';
 import { Center } from '../Center';
 
-interface MeStackProps {
+interface InviteFriendsStackProps {
 
 }
 const Stack = createStackNavigator();
 
-function Feed(){
+function InviteFriendsView(){
     return (
-        
         <Center>
-            <Text>Me Screen</Text>
+            <Text>Let your friends know!</Text>
         </Center>
     )
 }
 
-export const MeStack: React.FC<MeStackProps> = ({}) => {
+export const InviteFriendsStack: React.FC<InviteFriendsStackProps> = ({}) => {
     const { logout } = useContext(AuthContext);
     return (
-    <Stack.Navigator>
-        <Stack.Screen name = "Feed" component = {Feed}
+        <Stack.Navigator>
+        <Stack.Screen name = "InviteFriendsView" component = {InviteFriendsView}
             options={{
-                headerTitle: "Me",
+                headerTitle: "Invite Friends",
                 headerRight: () => {
                     return(
+
                         <TouchableOpacity
                         onPress={()=> {
                             logout();
@@ -39,8 +40,5 @@ export const MeStack: React.FC<MeStackProps> = ({}) => {
         }} 
         />
     </Stack.Navigator>
-
         )
 }
-
-export default MeStack;

@@ -1,32 +1,34 @@
+import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Text, TouchableOpacity } from 'react-native';
 import { AuthContext } from '../Authorization/AuthProvider';
 import { Center } from '../Center';
 
-interface MeStackProps {
+interface SettingsStackProps {
 
 }
+
 const Stack = createStackNavigator();
 
-function Feed(){
+function SettingsView(){
     return (
-        
         <Center>
-            <Text>Me Screen</Text>
+            <Text>Adjust your general settings!</Text>
         </Center>
     )
 }
 
-export const MeStack: React.FC<MeStackProps> = ({}) => {
+export const SettingsStack: React.FC<SettingsStackProps> = ({}) => {
     const { logout } = useContext(AuthContext);
     return (
-    <Stack.Navigator>
-        <Stack.Screen name = "Feed" component = {Feed}
+        <Stack.Navigator>
+        <Stack.Screen name = "SettingsView" component = {SettingsView}
             options={{
-                headerTitle: "Me",
+                headerTitle: "Settings",
                 headerRight: () => {
                     return(
+
                         <TouchableOpacity
                         onPress={()=> {
                             logout();
@@ -39,8 +41,5 @@ export const MeStack: React.FC<MeStackProps> = ({}) => {
         }} 
         />
     </Stack.Navigator>
-
         )
 }
-
-export default MeStack;

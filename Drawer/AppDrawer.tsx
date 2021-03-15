@@ -2,7 +2,12 @@ import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AppTabs } from '../AppTabs';
 import { DrawerParamList } from './DrawerParamList';
-import { Feather, MaterialIcons, FontAwesome5, Ionicons}from '@expo/vector-icons';
+import { MaterialIcons, FontAwesome5, Ionicons, Entypo}from '@expo/vector-icons';
+import { AccountStack } from '../Account/AccountStack';
+import { PrivacyStack } from '../Privacy/PrivacyStack';
+import { InviteFriendsStack } from '../InviteFriends/InviteFriendsStack';
+import { NotificationsStack } from '../Notifications/NotificationsStack';
+import { SettingsStack } from '../Settings/SettingsStack';
 
 interface AppDrawerProps {}
 
@@ -29,18 +34,22 @@ export const AppDrawer: React.FC<AppDrawerProps> = ({}) => {
               iconName = 'notifications';
               return <Ionicons name="notifications" size={24} color="black" />;
           } else if (route.name === 'Settings') { //keeping it at else if bc maybe more additions
-              iconName = 'ios-information-circle';
-              return <Feather name="settings" size={24} color="black" />;
-          }
+              iconName = 'ios-settings-sharp';
+              return <Ionicons name="ios-settings-sharp" size={24} color="black" />;
+          } else if (route.name === 'Home') { //keeping it at else if bc maybe more additions
+            iconName = 'home';
+            return <Entypo name="home" size={24} color="black" />;
+        } 
           // You can return any component that you like here!
         }
       })}
     >
-      <Drawer.Screen name="Account" component={AppTabs} />
-      <Drawer.Screen name="Privacy" component={AppTabs} />
-      <Drawer.Screen name="InviteFriends" component={AppTabs} />
-      <Drawer.Screen name="Notifications" component={AppTabs} />
-      <Drawer.Screen name="Settings" component={AppTabs} />
+      <Drawer.Screen name="Home" component={AppTabs} />
+      <Drawer.Screen name="Account" component={AccountStack} />
+      <Drawer.Screen name="Privacy" component={PrivacyStack} />
+      <Drawer.Screen name="InviteFriends" component={InviteFriendsStack} />
+      <Drawer.Screen name="Notifications" component={NotificationsStack} />
+      <Drawer.Screen name="Settings" component={SettingsStack} />
     </Drawer.Navigator>
 
   )

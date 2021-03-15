@@ -1,32 +1,33 @@
+import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Text, TouchableOpacity } from 'react-native';
 import { AuthContext } from '../Authorization/AuthProvider';
 import { Center } from '../Center';
 
-interface MeStackProps {
+interface NotificationsStackProps {
 
 }
 const Stack = createStackNavigator();
 
-function Feed(){
+function NotificationsView(){
     return (
-        
         <Center>
-            <Text>Me Screen</Text>
+            <Text>Adjust your notification settings!</Text>
         </Center>
     )
 }
 
-export const MeStack: React.FC<MeStackProps> = ({}) => {
+export const NotificationsStack: React.FC<NotificationsStackProps> = ({}) => {
     const { logout } = useContext(AuthContext);
     return (
-    <Stack.Navigator>
-        <Stack.Screen name = "Feed" component = {Feed}
+        <Stack.Navigator>
+        <Stack.Screen name = "NotificationsView" component = {NotificationsView}
             options={{
-                headerTitle: "Me",
+                headerTitle: "Notifications",
                 headerRight: () => {
                     return(
+
                         <TouchableOpacity
                         onPress={()=> {
                             logout();
@@ -39,8 +40,5 @@ export const MeStack: React.FC<MeStackProps> = ({}) => {
         }} 
         />
     </Stack.Navigator>
-
         )
 }
-
-export default MeStack;

@@ -1,32 +1,32 @@
+import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Text, TouchableOpacity } from 'react-native';
 import { AuthContext } from '../Authorization/AuthProvider';
 import { Center } from '../Center';
 
-interface MeStackProps {
+interface PrivacyStackProps {}
 
-}
 const Stack = createStackNavigator();
 
-function Feed(){
+function PrivacyView(){
     return (
-        
         <Center>
-            <Text>Me Screen</Text>
+            <Text>Check out our privacy policy!</Text>
         </Center>
     )
 }
 
-export const MeStack: React.FC<MeStackProps> = ({}) => {
+export const PrivacyStack: React.FC<PrivacyStackProps> = ({}) => {
     const { logout } = useContext(AuthContext);
     return (
-    <Stack.Navigator>
-        <Stack.Screen name = "Feed" component = {Feed}
+        <Stack.Navigator>
+        <Stack.Screen name = "PrivacyView" component = {PrivacyView}
             options={{
-                headerTitle: "Me",
+                headerTitle: "Privacy",
                 headerRight: () => {
                     return(
+
                         <TouchableOpacity
                         onPress={()=> {
                             logout();
@@ -39,8 +39,5 @@ export const MeStack: React.FC<MeStackProps> = ({}) => {
         }} 
         />
     </Stack.Navigator>
-
         )
 }
-
-export default MeStack;
