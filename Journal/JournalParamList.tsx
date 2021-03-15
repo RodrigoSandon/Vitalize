@@ -1,3 +1,3 @@
 export type JournalParamList = {
-    Feed: undefined;
+    JournalView: undefined;
 }

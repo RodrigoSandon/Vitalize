@@ -1,11 +1,7 @@
 import React from 'react'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AppParamList } from './AppParamList';
-import { Button, Text, StyleSheet } from 'react-native';
-import { Center } from './Center';
-import { AuthContext } from './Authorization/AuthProvider';
-import { Ionicons, FontAwesome5, Entypo, MaterialCommunityIcons}from '@expo/vector-icons';
-import { Image } from 'react-native';
+import { FontAwesome5, Entypo, MaterialCommunityIcons}from '@expo/vector-icons';
 import { MeditateStack } from './Meditate/MeditateStack';
 import { MeStack } from './Me/MeStack';
 import { JournalStack } from './Journal/JournalStack';
@@ -14,6 +10,7 @@ interface AppTabsProps {}
 
 const Tabs = createBottomTabNavigator<AppParamList>()
 
+//A stack
 export const AppTabs: React.FC<AppTabsProps> = ({}) => {
         return (
             <Tabs.Navigator
